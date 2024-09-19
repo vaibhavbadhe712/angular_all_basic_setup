@@ -1,0 +1,84 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h4>Task Portal</h4>
+        </div>
+        <div class="col-6" style="text-align: right;">
+            <button class="btn btn-outline-success"  (click)="openModel()">Add New Task</button>
+        </div>
+    </div>
+<br>
+@for(task of tasks; track task.groupId){
+<div class="card card-margin" style="width:auto" >
+    <div class="card-body">
+      <h5 class="card-title">Description</h5>
+      <p class="card-text">{{ task.name }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong>Assigned To:</strong> {{ task.assignedTo.name }}</li>
+      <li class="list-group-item"><strong>Priority:</strong> {{ task.priority }}</li>
+      <li class="list-group-item"><strong>Status:</strong> {{ task.status }}</li>
+      <li class="list-group-item"><strong>Due:</strong> {{ task.due }}</li>
+
+      <li class="list-group-item"><strong>Created At:</strong> {{ task.createdAt }}</li>
+
+      <li class="list-group-item"><strong>Start Date:</strong> {{ task.startDate }}</li>
+
+      <li class="list-group-item"><strong>End Date:</strong> {{ task.endDate  }}</li>
+      <li class="list-group-item"><strong>Total Time:</strong> {{ task.totalTime }}</li>
+      <li class="list-group-item"><strong>Total Break Time:</strong> {{ task.totalBreakTime }}</li>
+
+    </ul>
+    <!-- <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div> -->
+  </div>}
+
+
+
+  
+<div class="modal" id="myModal" #myModal>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Create New Task</h4>
+                <button type="button" class="btn-close" (click)="closeModel()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-8">
+                        <label for="">Task Description</label>
+                        <input type="text" [(ngModel)]="taskObj.name" class="form-control" placeholder="Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">assignedTo</label>
+                        <input type="text" [(ngModel)]="taskObj.assignedTo" class="form-control" placeholder="assignedTo">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Priority</label>
+                        <input type="text" [(ngModel)]="taskObj.prority" class="form-control" placeholder="Priority">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="">Status</label>
+                        <input type="text" [(ngModel)]="taskObj.status" class="form-control" placeholder="Status">
+                    </div>
+                    <div class="col-4">
+                        <label for="">Due Date</label>
+                        <input type="text" [(ngModel)]="taskObj.due" class="form-control" placeholder="Due Date">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closeModel()">Close</button>
+                <button type="button" class="btn btn-primary mx-2" (click)="saveTask()">Save Task</button>
+                
+            </div>
+        </div>
+    </div>
+</div>

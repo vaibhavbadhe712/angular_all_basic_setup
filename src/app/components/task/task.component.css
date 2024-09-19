@@ -1,0 +1,126 @@
+
+  .card-margin {
+    margin: 10px;
+    background-color: lightcyan;
+    border-color: red;
+    border-width: 2px;
+  }
+
+  .list-group-item{
+    background-color: lightcyan;
+
+  }
+  
+  .btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .row{
+    justify-content: space-between;
+  }
+
+  /* Modal background overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1050; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  }
+  
+  /* Modal content */
+  .modal-dialog {
+    margin: 15px auto;
+    max-width: 500px;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modal header */
+  .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    position: relative;
+  }
+  
+  .modal-title {
+    margin: 0;
+  }
+  
+  .btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    opacity: 0.5;
+  }
+  
+  .btn-close:hover {
+    opacity: 1;
+  }
+  
+  /* Modal body */
+  .modal-body {
+    padding: 20px;
+  }
+  
+  /* Form controls */
+  .form-control {
+    border-radius: 0.3rem;
+    border: 1px solid #ced4da;
+  }
+  
+  /* Modal footer */
+  .modal-footer {
+    padding: 15px;
+    border-top: 1px solid #e9ecef;
+    text-align: right;
+  }
+  
+  .btn-danger, .btn-primary, .btn-success {
+    border-radius: 0.3rem;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-danger:hover, .btn-primary:hover, .btn-success:hover {
+    opacity: 0.8;
+  }
+  
+  .btn-primary.mx-2, .btn-success.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  

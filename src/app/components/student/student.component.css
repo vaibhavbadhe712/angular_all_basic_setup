@@ -1,0 +1,130 @@
+/* General Container Styles */
+.container {
+    padding: 5px;
+  }
+  
+  /* Row and Column Spacing */
+  .row.pt-3 {
+    margin-top: 15px;
+  }
+  
+  .col-6 {
+    padding: 0 15px;
+  }
+  
+  .col-12 {
+    padding: 0 15px;
+  }
+  
+  /* Card Styles */
+  .card {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 10px;
+  }
+  
+  /* Button Styles */
+  .btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  
+  .btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  /* Modal Styles */
+  .modal-dialog {
+    max-width: 800px;
+  }
+  
+  .modal-content {
+    border-radius: 5px;
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .modal-title {
+    margin: 0;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #dee2e6;
+  }
+  
+  /* Text Alignment */
+  .text-end {
+    text-align: right;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Input and Textarea Styles */
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    padding: 10px;
+  }
+  
+  textarea.form-control {
+    resize: vertical;
+  }
+  
+  /* Additional Styles */
+  .pt-3 {
+    padding-top: 1rem;
+  }
+  

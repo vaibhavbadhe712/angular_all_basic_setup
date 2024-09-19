@@ -1,0 +1,82 @@
+<!-- Existing form to display data -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngFor="let field of fields">
+      <label [for]="field.name">{{ field.label }}</label>
+      <ng-container [ngSwitch]="field.type">
+        <input *ngSwitchCase="'text'"
+               [formControlName]="field.name"
+               [id]="field.name"
+               type="text" />
+    
+        <input *ngSwitchCase="'number'"
+               [formControlName]="field.name"
+               [id]="field.name"
+               type="number" />
+    
+        <select *ngSwitchCase="'select'"
+                [formControlName]="field.name"
+                [id]="field.name">
+          <option *ngFor="let option of field.options"
+                  [value]="option.key">{{ option.value }}</option>
+        </select>
+    
+        <input *ngSwitchCase="'checkbox'"
+               [formControlName]="field.name"
+               [id]="field.name"
+               type="checkbox" />
+      </ng-container>
+    
+      <div *ngIf="form.get(field.name)?.invalid && (form.get(field.name)?.touched || false)">
+        <small *ngIf="form.get(field.name)?.errors?.['required']">This field is required</small>
+        <small *ngIf="form.get(field.name)?.errors?.['min']">Minimum value required</small>
+        <!-- Add more error messages based on your validators -->
+      </div>
+    </div>
+    
+  </form>
+  
+  <!-- Button to open modal -->
+  <button (click)="openModal()">Add Data</button>
+  
+  <!-- Modal -->
+  <div class="modal" [ngClass]="{'show': isModalOpen}" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <form [formGroup]="modalForm" (ngSubmit)="addData()">
+        <div *ngFor="let field of modalFields">
+          <label [for]="field.name">{{ field.label }}</label>
+          <ng-container [ngSwitch]="field.type">
+            <input *ngSwitchCase="'text'"
+                   [formControlName]="field.name"
+                   [id]="field.name"
+                   type="text" />
+    
+            <input *ngSwitchCase="'number'"
+                   [formControlName]="field.name"
+                   [id]="field.name"
+                   type="number" />
+    
+            <select *ngSwitchCase="'select'"
+                    [formControlName]="field.name"
+                    [id]="field.name">
+              <option *ngFor="let option of field.options"
+                      [value]="option.key">{{ option.value }}</option>
+            </select>
+    
+            <input *ngSwitchCase="'checkbox'"
+                   [formControlName]="field.name"
+                   [id]="field.name"
+                   type="checkbox" />
+          </ng-container>
+    
+          <div *ngIf="modalForm.get(field.name)?.invalid && (modalForm.get(field.name)?.touched || false)">
+            <small *ngIf="modalForm.get(field.name)?.errors?.['required']">This field is required</small>
+            <small *ngIf="modalForm.get(field.name)?.errors?.['min']">Minimum value required</small>
+            <!-- Add more error messages based on your validators -->
+          </div>
+        </div>
+        <button type="submit" [disabled]="modalForm.invalid">Add</button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,87 @@
+/* Container styling */
+.container {
+    max-width: 400px;
+    margin:50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* background-color: #f9f9f9; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h4 {
+    font-size: 24px;
+    
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+/* input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+} */
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Error message styling */
+.red-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Button styling */
+/* button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px;
+} */
+.btn-red,.btn-green{
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.btn-green {
+    background-color: #28a745;
+}
+
+.btn-red {
+    background-color: #dc3545;
+    margin-left: 20px;
+}
+
+/* Button hover effects */
+/* .btn-green:hover {
+    background-color: #218838;
+}
+
+.btn-red:hover {
+    background-color: #c82333;
+} */
+
+.btn-green:disabled,.btn-red:disabled{
+    background-color: #ddd;
+    cursor: not-allowed;
+}
